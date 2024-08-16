@@ -18,7 +18,7 @@ public InterventionController(InterventionServiceImpl interventionServiceImpl){
     this.interventionServiceImpl=interventionServiceImpl;
 }
   @PostMapping
-    public ResponseEntity<Intervention> createProduct(@RequestBody @Valid Intervention intervention){
+    public ResponseEntity<Intervention> createIntervention(@RequestBody @Valid Intervention intervention){
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 interventionServiceImpl.add_intervention(intervention)
         );
